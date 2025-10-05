@@ -189,8 +189,11 @@ public class ModBlocks {
             () -> new df4d_roof_e(Block.Properties.copy(c70_left_end_board.get())));
 
 
-    public static final RegistryObject<DoorBlock> df4d_cab_door_a = BLOCKS.register("df4d_cab_door_a",
-            () -> new df4d_cab_door_a(Block.Properties.of(Material.WOOD)));
+    // 在 ModBlocks.java 的 df4d 区域添加/修改
+    public static final RegistryObject<Block> df4d_cab_door_a = BLOCKS.register("df4d_cab_door_a",
+            () -> new df4d_cab_door_a(BlockBehaviour.Properties.copy(c70_left_end_board.get())  // 继承基础属性（与其他列车方块统一）
+                    .sound(SoundType.METAL)  // 金属门音效
+                    .noOcclusion()));  // 无遮挡特性
 
     public static final RegistryObject<DoorBlock> df4d_cab_door_b = BLOCKS.register("df4d_cab_door_b",
             () -> new df4d_cab_door_b(Block.Properties.of(Material.WOOD)));
