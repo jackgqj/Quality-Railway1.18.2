@@ -190,9 +190,10 @@ public class ModBlocks {
 
 
     // 在 ModBlocks.java 的 df4d 区域添加/修改
+    // 在 ModBlocks.java 中
     public static final RegistryObject<Block> df4d_cab_door_a = BLOCKS.register("df4d_cab_door_a",
-            () -> new df4d_cab_door_a(BlockBehaviour.Properties.copy(c70_left_end_board.get())  // 继承基础属性（与其他列车方块统一）
-                    .sound(SoundType.METAL)  // 金属门音效
+            () -> new df4d_cab_door_a(BlockBehaviour.Properties.copy(c70_left_end_board.get())
+                    .sound(SoundType.METAL)
                     .noOcclusion()));  // 无遮挡特性
 
     public static final RegistryObject<DoorBlock> df4d_cab_door_b = BLOCKS.register("df4d_cab_door_b",
